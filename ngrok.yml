@@ -1,0 +1,5 @@
+metadata: '{"description": "Les da la bienvenida, visiten nuestro homebanking BCP", "comment": "Prototipo inicial"}'
+tunnels:
+ main:
+   addr: 80
+   proto: http
