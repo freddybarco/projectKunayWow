@@ -1,7 +1,8 @@
 import requests
 import subprocess
 import time
-
+from instapush import Instapush, App
+app = App(appid='5995ec43a4c48a06217b23c6', secret='9c3d758baf6cae6108515820a57ce837')
 
 #subprocess.call("ngrok start -config=ngrok.yml main",shell=False)
 print("wait...")
@@ -72,6 +73,8 @@ command3 = "sudo hcitool -i hci0 cmd " + commandstring
 print(command1)
 print(command2)
 print(command3)
+
+app.notify(event_name='ProjectKunayWow', trackers={ 'url': public_url,'trama' : commandstring})
 
 subprocess.call(command1,shell=True)
 subprocess.call(command2,shell=True)
