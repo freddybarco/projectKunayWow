@@ -1,10 +1,12 @@
 import requests
 import subprocess
+import time
 
 
 #subprocess.call("ngrok start -config=ngrok.yml main",shell=False)
-
-
+print("wait...")
+time.sleep(5)
+print("ready")
 lista =[]
 commandstring = ""
 r=requests.get('http://localhost:4040/api/tunnels')
